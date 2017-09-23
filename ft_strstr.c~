@@ -1,0 +1,79 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/20 21:33:07 by aho               #+#    #+#             */
+/*   Updated: 2017/09/20 21:57:16 by aho              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include <string.h> 
+#include <stdlib.h> 
+
+int ft_strlen(char *str)
+{
+	int counter;
+	counter = 0;
+	while (str[counter] != '\0')
+		counter++;
+	return counter;
+}
+
+char *ft_strstr(char *full_str, char *sub_str)
+{
+	int i; 
+	int j; 
+
+	i = 0; 
+	j = 0; 
+
+	char *new_string;
+
+	new_string = (char*)malloc(ft_strlen(str) * sizeof(char));
+
+
+
+
+
+	while (str[i] != '\0')
+	{
+		if (str[i] == ch)
+		{
+			while (str[i] != '\0') 
+			{
+				new_string[j] = str[i]; 
+				j++; 
+				i++; 
+			}
+		}
+		else
+			i++; 
+	}
+
+	return new_string;
+}
+
+int main(void)
+{
+	char *string1; 
+	char *substr1; 
+
+	string1 = "hello my name is annie"; 
+	substr1 = 'annie'; 
+	
+	printf("ft_strstr string: %s \n", ft_strstr(string1, substr1));
+
+
+
+	char *string2; 
+	char *substr2; 
+
+	string2 = "hello my name is annie"; 
+	substr2 = 'annie'; 
+	
+	printf("strstr string: %s \n", strstr(string2, substr2));
+}
