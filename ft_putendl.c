@@ -6,29 +6,23 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 17:20:30 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 17:49:39 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/25 15:10:43 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
-void ft_putchar(char c) 
-{
-	write (1, &c, 1); 
-}
+void ft_putchar(char c); 
 
 void ft_putendl(char const *s) 
 {
 	int i; 
 	i = 0; 
+	if (!s) 
+		return;
 	while (s[i]  != '\0') 
 	{
 		ft_putchar(s[i]); 
 		i++; 
 	}
 	ft_putchar('\n');
-}
-
-int main (void) 
-{
-	ft_putendl("hello friends"); 
 }

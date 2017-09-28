@@ -6,14 +6,12 @@
 /*   By: aho <aho@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 17:42:13 by aho               #+#    #+#             */
-/*   Updated: 2017/09/24 18:42:23 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/27 23:27:23 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-
+#include "libft.h"
+/*
 void *ft_memset(void *b, int c, size_t len)
 {
     size_t i;
@@ -30,6 +28,7 @@ void *ft_memset(void *b, int c, size_t len)
     }
     return b;
 }
+*/
 
 char *ft_strnew(size_t size)
 {
@@ -56,6 +55,7 @@ char *ft_strnew(size_t size)
 	return str; 
 }
 
+/*
 int main() 
 {
 	char *str1; 
@@ -63,3 +63,4 @@ int main()
 	printf("ft_strnew: %s", str1); 
 	
 }
+*/

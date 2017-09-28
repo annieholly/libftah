@@ -6,33 +6,30 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 14:16:24 by aho               #+#    #+#             */
-/*   Updated: 2017/09/24 14:42:10 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/28 04:15:42 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h> 
-#include <string.h> 
-
+#include "libft.h"
 
 void *ft_memset(void *b, int c, size_t len)
 {
-	size_t i; 
 	unsigned char *str; 
 	unsigned char ch; 
 
-	i = 0; 
 	str = b;
-	ch = (char)c; 
-	while (i < len) 
+	ch = c; 
+	while (0 < len) 
 	{
-		str[i] = ch; 
-		i++; 
+		*str = ch; 
+		str++; 
+		len--; 
 	}
-	return b;
+	return (b);
 }
 
 
+/*
 int main()
 {
 
@@ -64,3 +61,4 @@ int main()
 
 
 }
+*/

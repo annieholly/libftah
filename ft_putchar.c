@@ -3,21 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 14:03:26 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 14:32:27 by aho              ###   ########.fr       */
+/*   Created: 2017/09/24 23:14:13 by aho               #+#    #+#             */
+/*   Updated: 2017/09/25 15:00:14 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putchar(char c) {
 	write(1, &c, 1); 
 }
-
-/***
-int main(void) {
-	ft_putchar('a');
-}
-***/

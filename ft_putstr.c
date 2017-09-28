@@ -5,36 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 16:03:24 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 16:21:29 by aho              ###   ########.fr       */
+/*   Created: 2017/09/25 14:58:29 by aho               #+#    #+#             */
+/*   Updated: 2017/09/27 22:53:27 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> 
-
-void ft_putchar(char c)
-{
-	write(1, &c, 1); 
-}
+#include "libft.h" 
 
 void ft_putstr(char *str)
 {
 	int i; 
 	i = 0;
+	if (!str) 
+		return;
 	while (str[i] != '\0') 
 	{
 		ft_putchar(str[i]);
 		i++;
 	}
-}
-
-int main (void) 
-{
-	ft_putstr("hello");
-	ft_putchar('\n');
-	ft_putchar('a');
-	ft_putchar('\n');
-	ft_putchar('b');
-
-
 }

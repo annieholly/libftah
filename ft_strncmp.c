@@ -1,36 +1,32 @@
-#include <stdio.h> 
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/26 09:44:21 by aho               #+#    #+#             */
+/*   Updated: 2017/09/26 11:58:20 by aho              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strncmp(char *s1, char *s2, int num)
+#include "libft.h" 
+
+int ft_strncmp(const char *s1,const  char *s2, size_t num)
 {
-	int i; 
-	int j; 
-	int diff; 
+	size_t i; 
+	unsigned char *u1; 
+	unsigned char *u2; 
 	
 	i = 0; 
-	j = 0; 
-	diff = 0 ; 
-	while (i < num)
+	u1 = (unsigned char*)s1; 
+	u2 = (unsigned char*)s2; 
+	while (i < num && s1[i] != '\0' && s2[i] != '\0')
 	{
-		if(s1[i] == s2[j]) 
-		{
-			i++; 
-			j++; 
-		}
+		if (u1[i] != u2[i]) 
+			return (u1[i] - u2[i]);
 		else
-		{
-			diff = s1[i] - s2[j]; 
-			return diff;
-		}
-	} 
-	return 0; 
-}
-
-int main() 
-{
-	char string1[]="cotsled"; 
-	char string2[]="catsled"; 
-	printf("result: %d \n", ft_strncmp(string1, string2, 3)); 
-	printf("result: %d \n", strncmp(string1, string2, 3)); 
-
+			i++; 
+	}
+	return u1[i] - u2[i]; 
 }

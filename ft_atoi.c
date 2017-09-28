@@ -6,51 +6,48 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 14:52:44 by aho               #+#    #+#             */
-/*   Updated: 2017/09/21 15:56:13 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/28 06:20:30 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> 
-#include <string.h> 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_atoi(char *str) 
+int	ft_atoi(const char *str) 
 {
 	int i; 
 	int num;
+	int sign; 
 
 	i = 0; 
 	num = 0; 
-
+	sign = 1; 
+	//parse string - if + or - assign positive or negative
+	if (!str)
+		return ; 
 	while (str[i] != '\0') 
 	{
-		while (str[i+1] >= 48 && str[i+1] <= 57) 
-		{
-			num = (num * 10) + str[i];
+//			printf("\n\n begin loop - num: %i, str[%i]: %c \n", num, i, str[i]); 
 
+		if (str[i] == '-' || str[i] == '+')
+		{
+			if (str[i + 1] == '-' || str[i + 1] == '+')
+				return (0);
+			if (str[i] == '-') 
+				sign = -1;
+			i++;
 		}
+
+
+		while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0') 
+		{
+			printf("num: %i, str[%i]: %c \n", num, i, str[i]); 
+			num = (num * 10) + (str[i] - '0');
+			i++;
+		}
+			printf("outside while - num: %i, str[%i]: %c \n", num, i, str[i]); 
+
 		i++;
 	}
 
-	return num; 
-}
-
-int main(void)
-{
-	printf("ft_atoi('5') %d \n", ft_atoi("5"));
-	printf("STANDARD LIBRARY atoi('5') %d \n\n", atoi("5"));
-
-	printf("ft_atoi('abc') %d \n", ft_atoi("abc"));
-	printf("STANDARD LIBRARY atoi('abc') %d \n\n", atoi("abc"));
-
- 	printf("ft_atoi('0') %d \n", ft_atoi("0"));
-	printf("STANDARD LIBRARY atoi('0') %d \n\n", atoi("0"));
-
- 	printf("ft_atoi('0') %d \n", ft_atoi("123"));
-	printf("STANDARD LIBRARY atoi('0') %d \n\n", atoi("123"));
-
- 	printf("ft_atoi('0') %d \n", ft_atoi("abc123"));
-	printf("STANDARD LIBRARY atoi('0') %d \n\n", atoi("abc123"));
-
-
+	return (sign * num); 
 }

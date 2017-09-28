@@ -1,43 +1,18 @@
-#include <stdio.h> 
-#include <ctype.h> 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/25 00:10:36 by aho               #+#    #+#             */
+/*   Updated: 2017/09/25 00:12:35 by aho              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isdigit(char c) 
+int ft_isdigit(int c) 
 {
-	if (c >= 48 && c <= 57) 
-		return 1; 
+	if (c >= 48 && c <= 57)
+		return 1;
 	return 0; 
-}
-
-int main(void)
-{
-    printf("ft_isdigit('C'): %d \n", ft_isdigit('C'));
-    printf("isdigit('C') test: %d \n", isdigit('C'));
-
-    printf("ft_isdigit('1'): %d \n", ft_isdigit('1'));
-    printf("isdigit('1') test: %d \n", isdigit('1'));
-
-    printf("ft_isdigit('@'): %d \n", ft_isdigit('@'));
-    printf("isdigit('@') test: %d \n", isdigit('@'));
-
-    printf("ft_isdigit('Z'): %d \n", ft_isdigit('Z'));
-    printf("isdigit('Z') test: %d \n", isdigit('Z'));
-
-    printf("ft_isdigit('['): %d \n", ft_isdigit('['));
-    printf("isdigit('[') test: %d \n", isdigit('['));
-
-    printf("ft_isdigit('/'): %d \n", ft_isdigit('/'));
-    printf("isdigit('/') test: %d \n", isdigit('/'));
-
-    printf("ft_isdigit('0'): %d \n", ft_isdigit('0'));
-    printf("isdigit('0') test: %d \n", isdigit('0'));
-
-    printf("ft_isdigit('9'): %d \n", ft_isdigit('9'));
-    printf("isdigit('9') test: %d \n", isdigit('9'));
-
-    printf("ft_isdigit('7'): %d \n", ft_isdigit('7'));
-    printf("isdigit('7') test: %d \n", isdigit('7'));
-
-    printf("ft_isdigit('2'): %d \n", ft_isdigit('2'));
-    printf("isdigit('2') test: %d \n", isdigit('2'));
-
 }

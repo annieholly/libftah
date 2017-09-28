@@ -6,7 +6,7 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 17:51:14 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 18:00:34 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/27 22:51:14 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,4 @@
 void ft_putchar_fd(char c, int fd) 
 {
 	write (fd, &c, 1); 
-}
-
-int main(void)
-{
-	ft_putchar_fd('a',0); 
-	ft_putchar_fd('b',1); 
-	ft_putchar_fd('c',2); 
 }

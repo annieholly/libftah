@@ -5,24 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 16:33:39 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 17:22:10 by aho              ###   ########.fr       */
+/*   Created: 2017/09/25 12:36:33 by aho               #+#    #+#             */
+/*   Updated: 2017/09/25 12:48:17 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h> 
 
-int ft_strlen(char *str)
-{
-	int counter; 
-	counter = 0; 
-	while (str[counter] != '\0')
-		counter++;
-	return counter;
-}
+#include <stddef.h> 
 
-int main(void)
+size_t ft_strlen(const char *s)
 {
-	int stringlength; 
-	stringlength = ft_strlen("hello friend"); 
-	printf("string length: %d \n", stringlength);
+	int ctr; 
+	ctr = 0; 
+	while (s[ctr] != '\0')
+		ctr++;
+	return ctr;
 }

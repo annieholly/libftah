@@ -6,16 +6,11 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:58:57 by aho               #+#    #+#             */
-/*   Updated: 2017/09/18 16:33:17 by aho              ###   ########.fr       */
+/*   Updated: 2017/09/27 23:25:48 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> 
-
-void ft_putchar(char c)
-{
-	write (1, &c, 1); 
-}
+#include "libft.h"
 
 void ft_putnbr(int num) 
 {
@@ -29,9 +24,10 @@ void ft_putnbr(int num)
 
 	}
 
-	ft_putchar(n + 48);
+	ft_putchar(num + 48);
 }
 
+/*
 int main()
 {
 	ft_putnbr(4);
@@ -44,3 +40,4 @@ int main()
 	ft_putchar('\n');
 
 }
+*/
