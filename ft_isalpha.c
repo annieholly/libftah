@@ -6,15 +6,15 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 23:41:11 by aho               #+#    #+#             */
-/*   Updated: 2017/09/24 23:41:36 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/14 18:48:00 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int		ft_isalpha(int c)
 {
-	if (c >= 65  && c <= 90) 
-		return 1;
-	if (c >= 97 && c <= 122) 
-		return 1;
-	return 0; 			
+	if (c >= 65 && c <= 90)
+		return (1);
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
 }

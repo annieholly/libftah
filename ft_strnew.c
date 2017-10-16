@@ -6,61 +6,21 @@
 /*   By: aho <aho@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 17:42:13 by aho               #+#    #+#             */
-/*   Updated: 2017/09/27 23:27:23 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/15 00:52:07 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-void *ft_memset(void *b, int c, size_t len)
+
+char	*ft_strnew(size_t size)
 {
-    size_t i;
-    unsigned char *str;
-    unsigned char ch;
+	int		i;
+	char	*str;
 
-    i = 0;
-    str = b;
-    ch = (char)c;
-    while (i < len)
-    {
-        str[i] = ch;
-        i++;
-    }
-    return b;
+	i = 0;
+	str = ft_memalloc(size + 1);
+	if (!str)
+		return (NULL);
+	ft_memset(str, '\0', size * sizeof(char));
+	return (str);
 }
-*/
-
-char *ft_strnew(size_t size)
-{
-	int i; 
-	char *str; 
-
-	i = 0; 
-	str = (char*)malloc((size + 1) * sizeof(char*));
-
-	ft_memset(str, '\0', size*sizeof(char));
-
-
-
-/**
-	while(size > 0)
-	{
-		str[i] = '\0'; 
-		i++;
-		size--;
-	}
-
-**/
-
-	return str; 
-}
-
-/*
-int main() 
-{
-	char *str1; 
-	str1 = ft_strnew(5); 
-	printf("ft_strnew: %s", str1); 
-	
-}
-*/

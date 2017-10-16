@@ -6,21 +6,22 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/28 05:36:44 by aho               #+#    #+#             */
-/*   Updated: 2017/09/28 05:36:55 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/15 00:53:39 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
-	int i; 
-	i = 0; 
-	if (!s) 
+	int		i;
+
+	i = 0;
+	if (!s)
 		return ;
-	while (s[i] != '\0') 
+	while (s[i] != '\0')
 	{
-		s[i] = '\0'; 
+		s[i] = '\0';
 		i++;
 	}
 }

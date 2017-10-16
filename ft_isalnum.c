@@ -6,17 +6,17 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 22:07:31 by aho               #+#    #+#             */
-/*   Updated: 2017/09/24 23:36:53 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/14 18:46:38 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c) 
+int		ft_isalnum(int c)
 {
-    if (c >= 48 && c <= 57)
-        return 1;
-    if (c >= 65  && c <= 90)
-        return 1;
-    if (c >= 97 && c <= 122)
-        return 1;
-	return 0;
+	if (c >= 48 && c <= 57)
+		return (1);
+	if (c >= 65 && c <= 90)
+		return (1);
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
 }

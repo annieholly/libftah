@@ -3,41 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 15:58:57 by aho               #+#    #+#             */
-/*   Updated: 2017/09/27 23:25:48 by aho              ###   ########.fr       */
+/*   Created: 2017/10/15 01:15:37 by aho               #+#    #+#             */
+/*   Updated: 2017/10/15 01:15:44 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int num) 
+void	ft_putnbr(int num)
 {
+	if (num == -2147483648)
+	{
+		ft_putstr("-2147483648");
+		return ;
+	}
+	if (num > 2147483647 || num < -2147483648)
+		num = 0;
 	if (num < 0)
 	{
-		
+		ft_putchar('-');
+		num = num * -1;
 	}
-
-	if (num % 10 != 0) 
+	if (num >= 10)
 	{
-
+		ft_putnbr(num / 10);
+		num = num % 10;
+		ft_putchar(num + 48);
 	}
-
-	ft_putchar(num + 48);
+	else
+		ft_putchar(num + 48);
 }
-
-/*
-int main()
-{
-	ft_putnbr(4);
-	ft_putchar('\n');
-	ft_putnbr(-1);
-	ft_putchar('\n');
-	ft_putnbr(0);
-	ft_putchar('\n');
-	ft_putnbr(100);
-	ft_putchar('\n');
-
-}
-*/

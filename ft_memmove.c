@@ -3,62 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aho <aho@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 19:12:45 by aho               #+#    #+#             */
-/*   Updated: 2017/09/27 23:25:07 by aho              ###   ########.fr       */
+/*   Created: 2017/10/14 19:47:20 by aho               #+#    #+#             */
+/*   Updated: 2017/10/14 19:48:04 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h> 
-#include <string.h> 
+#include "libft.h"
 
-/*
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int i; 
-	i = 0; 
+	char		*d;
+	const char	*s;
 
-	while (i < len) 
+	d = dst;
+	s = src;
+	if (s < d && d < s + len)
 	{
-		dst[i] = src[i]
+		d = d + len - 1;
+		s = s + len - 1;
+		while (len > 0)
+		{
+			*d-- = *s--;
+			len--;
+		}
 	}
-
-	return dst;
-}
-*/
-
-/*
-void *ft_memmove(void *dst, const void *src, size_t len)
-{
-	int i; 
-	i = 0; 
-
-	while (i < len) 
+	else
 	{
-		dst[i] = src[i]
+		while (len > 0)
+		{
+			*d++ = *s++;
+			len--;
+		}
 	}
-
-	return dst;
+	return (dst);
 }
-
-
-int main()
-{
-	char str1[12] = "hello world";
-
-	printf("before ft_memmove: %s\n", str1);
-	ft_memmove(str1 + 6, '!', 5*sizeof(char));
-	printf("after ft_memmove: %s\n\n", str1);
-
-// STANDARD LIBRARY TEST
-//	void *memmove(void *ptr, int x, size_t n);
-
-	char str2[12] = "hello world";
-	printf("before memmove: %s\n", str2);
-	memmove(str2 + 6, '!', 5*sizeof(char));
-	printf("after memmove: %s\n\n", str2);
-
-}
-*/

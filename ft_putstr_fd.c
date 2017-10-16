@@ -6,22 +6,22 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 22:54:22 by aho               #+#    #+#             */
-/*   Updated: 2017/09/27 22:59:28 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/15 01:17:37 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-void ft_putstr_fd(const char *s, int fd) 
+void	ft_putstr_fd(const char *s, int fd)
 {
-	int i; 
+	int		i;
 
-	i = 0; 
+	i = 0;
 	if (!s)
 		return ;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);
-		i++; 
+		i++;
 	}
 }

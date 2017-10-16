@@ -6,12 +6,13 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 23:14:13 by aho               #+#    #+#             */
-/*   Updated: 2017/09/25 15:00:14 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/15 01:12:07 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar(char c) {
-	write(1, &c, 1); 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }

@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/18 17:20:30 by aho               #+#    #+#             */
-/*   Updated: 2017/09/25 15:10:43 by aho              ###   ########.fr       */
+/*   Created: 2017/10/15 01:13:44 by aho               #+#    #+#             */
+/*   Updated: 2017/10/15 01:14:42 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putchar(char c); 
-
-void ft_putendl(char const *s) 
+void	ft_putendl(char const *s)
 {
-	int i; 
-	i = 0; 
-	if (!s) 
-		return;
-	while (s[i]  != '\0') 
+	int		i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i] != '\0')
 	{
-		ft_putchar(s[i]); 
-		i++; 
+		ft_putchar(s[i]);
+		i++;
 	}
 	ft_putchar('\n');
 }

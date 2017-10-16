@@ -6,13 +6,13 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 00:16:18 by aho               #+#    #+#             */
-/*   Updated: 2017/09/25 00:19:52 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/14 19:29:27 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int		ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-        return c - 32;
-    return c;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

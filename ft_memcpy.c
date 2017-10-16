@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/28 05:52:53 by aho               #+#    #+#             */
-/*   Updated: 2017/09/28 05:58:15 by aho              ###   ########.fr       */
+/*   Created: 2017/10/14 19:34:50 by aho               #+#    #+#             */
+/*   Updated: 2017/10/14 19:35:37 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void			*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *restrict d; 
-	const char *restrict s;
+	char		*d;
+	const char	*s;
 
-	d = dst; 
+	d = dst;
 	s = src;
 	while (n > 0)
 	{
-		*d = *s; 
-		d++; 
+		*d = *s;
+		d++;
 		s++;
-		n--; 
+		n--;
 	}
-	return (dst); 
+	return (dst);
 }

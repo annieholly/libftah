@@ -6,13 +6,13 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 00:10:36 by aho               #+#    #+#             */
-/*   Updated: 2017/09/25 00:12:35 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/14 19:31:30 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c) 
+int		ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-		return 1;
-	return 0; 
+		return (1);
+	return (0);
 }
