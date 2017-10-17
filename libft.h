@@ -6,7 +6,11 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2017/10/17 01:28:59 by aho              ###   ########.fr       */
+=======
+/*   Updated: 2017/10/16 18:17:48 by aho              ###   ########.fr       */
+>>>>>>> e346645a64a29603f96088c66e2c203748dd501a
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +20,10 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
+<<<<<<< HEAD
 # include <string.h>
+=======
+>>>>>>> e346645a64a29603f96088c66e2c203748dd501a
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
