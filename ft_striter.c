@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/05 23:29:51 by aho               #+#    #+#             */
-/*   Updated: 2017/10/15 00:56:47 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/16 15:41:35 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	size_t	len;
 	int		i;
 
-	if (!s)
+	if (!s || !f)
 		return ;
 	str = s;
 	len = ft_strlen(str);

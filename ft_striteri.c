@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 18:09:38 by aho               #+#    #+#             */
-/*   Updated: 2017/10/15 01:00:55 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/16 15:42:42 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	char			*str;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return ;
 	str = s;
 	while (str[i] != '\0')

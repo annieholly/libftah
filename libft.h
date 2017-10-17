@@ -6,16 +6,17 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2017/10/16 01:55:11 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/17 01:28:59 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <ctype.h>
+#ifndef _LIBFT_H
+# define _LIBFT_H
+
+# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -75,6 +76,7 @@ int					ft_signofnumstr(char *str);
 int					ft_powerofnum(int n);
 int					ft_wordlen(char const *s, char c);
 int					ft_wordcount(char const *s, char c);
+int					check_int(long int num);
 typedef struct		s_list
 {
 	void			*content;
@@ -87,3 +89,5 @@ void				ft_lstdel(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void(*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+#endif
