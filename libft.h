@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2017/10/17 01:28:59 by aho              ###   ########.fr       */
+/*   Updated: 2017/10/18 21:39:06 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int num, int fd);
 int					ft_isspace(int c);
-int					ft_signofnumstr(char *str);
+int					ft_signofnumstr(char const *str);
 int					ft_powerofnum(int n);
 int					ft_wordlen(char const *s, char c);
 int					ft_wordcount(char const *s, char c);
