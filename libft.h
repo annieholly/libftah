@@ -35,18 +35,18 @@ char				*ft_strncat(char *s1, const char *s2, size_t n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *big, const char *little);
-char				*ft_strnstr(const char *big, const char *little,
-								size_t len);
-int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strnstr(const char *big, const char *little, size_t len);
+int			        ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t num);
 int					ft_atoi(const char *str);
+int 				ft_atoin(const char *str, int n);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
-int					ft_toupper(int c);
-int					ft_tolower(int c);
+char					ft_toupper(int c);
+char					ft_tolower(int c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -63,6 +63,10 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_itohex(int n, int uppercase_flag, int prepend);
+char   				*ft_ltoa(long int n);
+char				*ft_ftoa(float n, int precision, int decimal);
+
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 void				ft_putendl(char const *s);
@@ -71,11 +75,17 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(const char *s, int fd);
 void				ft_putnbr_fd(int num, int fd);
+
+void				ft_strrev(char *s);
 int					ft_isspace(int c);
 int					ft_signofnumstr(char const *str);
 int					ft_powerofnum(int n);
+long int				ft_powerofnuml(long int n);
 int					ft_wordlen(char const *s, char c);
 int					ft_wordcount(char const *s, char c);
+
+void				ft_strupper(char *s);
+
 int					check_int(long int num);
 typedef struct		s_list
 {
