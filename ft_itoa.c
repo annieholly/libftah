@@ -6,7 +6,7 @@
 /*   By: aho <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 16:25:12 by aho               #+#    #+#             */
-/*   Updated: 2017/10/15 21:05:00 by aho              ###   ########.fr       */
+/*   Updated: 2018/01/09 22:07:00 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,26 @@ char	*ft_itoa(int n)
 	numstr[power] = (char)(n) + 48;
 	if (sign == -1)
 		numstr[power] = '-';
+	return (numstr);
+}
+
+
+char	*ft_unsigneditoa(unsigned int n)
+{
+	char		*numstr;
+	int			power;
+
+	power = ft_powerofunsignedint(n);
+	numstr = ft_memalloc(power + 2);
+	if (numstr == 0)
+		return (0);
+	numstr[power + 1] = '\0';
+	while (power > 0)
+	{
+		numstr[power] = (char)((n % 10) + 48);
+		n = n / 10;
+		power--;
+	}
+	numstr[power] = (char)(n) + 48;
 	return (numstr);
 }

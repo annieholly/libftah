@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2017/10/18 21:39:06 by aho              ###   ########.fr       */
+/*   Updated: 2018/01/10 18:44:21 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,13 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_unsigneditoa(unsigned int n);
 char				*ft_itohex(int n, int uppercase_flag, int prepend);
+char				*ft_uitohex(unsigned long long int n, int uppercase_flag, int prepend);
+
+
+char				*ft_itooct(int n);
+
 char   				*ft_ltoa(long int n);
 char				*ft_ftoa(float n, int precision, int decimal);
 
@@ -80,9 +86,12 @@ void				ft_strrev(char *s);
 int					ft_isspace(int c);
 int					ft_signofnumstr(char const *str);
 int					ft_powerofnum(int n);
+int					ft_powerofunsignedint(unsigned int n);
 long int				ft_powerofnuml(long int n);
 int					ft_wordlen(char const *s, char c);
 int					ft_wordcount(char const *s, char c);
+
+char				gethexchar(int n_mod);
 
 void				ft_strupper(char *s);
 
