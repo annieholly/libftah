@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2018/01/10 18:44:21 by aho              ###   ########.fr       */
+/*   Updated: 2018/01/14 22:53:11 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char				*ft_uitohex(unsigned long long int n, int uppercase_flag, int prepend);
 char				*ft_itooct(int n);
 
 char   				*ft_ltoa(long int n);
+char    			*ft_Lftoa(long double n, int precision, int includepoint);
 char				*ft_ftoa(float n, int precision, int decimal);
 
 void				ft_putchar(char c);
