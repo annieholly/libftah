@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2018/01/14 22:53:11 by aho              ###   ########.fr       */
+/*   Updated: 2018/01/21 22:18:38 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char				*ft_uitohex(unsigned long long int n, int uppercase_flag, int prepend);
 char				*ft_itooct(int n);
 
 char   				*ft_ltoa(long int n);
+char   				*ft_lltoa(long long int n);
 char    			*ft_Lftoa(long double n, int precision, int includepoint);
 char				*ft_ftoa(float n, int precision, int decimal);
 
@@ -87,6 +88,7 @@ void				ft_strrev(char *s);
 int					ft_isspace(int c);
 int					ft_signofnumstr(char const *str);
 int					ft_powerofnum(int n);
+long int			ft_powerofnumll(long long int n);
 int					ft_powerofunsignedint(unsigned int n);
 long int				ft_powerofnuml(long int n);
 int					ft_wordlen(char const *s, char c);
