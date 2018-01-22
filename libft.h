@@ -6,7 +6,7 @@
 /*   By: aho <aho@student.42.us.org>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/16 01:43:41 by aho               #+#    #+#             */
-/*   Updated: 2018/01/21 22:18:38 by aho              ###   ########.fr       */
+/*   Updated: 2018/01/22 00:23:13 by aho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
+# include <inttypes.h>
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -72,6 +72,8 @@ char				*ft_itooct(int n);
 
 char   				*ft_ltoa(long int n);
 char   				*ft_lltoa(long long int n);
+char   				*ft_jtoa(intmax_t n);
+char   				*ft_ztoa(size_t n);
 char    			*ft_Lftoa(long double n, int precision, int includepoint);
 char				*ft_ftoa(float n, int precision, int decimal);
 
@@ -87,8 +89,12 @@ void				ft_putnbr_fd(int num, int fd);
 void				ft_strrev(char *s);
 int					ft_isspace(int c);
 int					ft_signofnumstr(char const *str);
+
 int					ft_powerofnum(int n);
 long int			ft_powerofnumll(long long int n);
+intmax_t			ft_powerofnumj(intmax_t n);
+size_t				ft_powerofnumz(size_t n);
+
 int					ft_powerofunsignedint(unsigned int n);
 long int				ft_powerofnuml(long int n);
 int					ft_wordlen(char const *s, char c);
